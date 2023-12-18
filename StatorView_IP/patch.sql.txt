@@ -1,0 +1,44 @@
+/* 03-05-2022 - SNO generation method */
+update CONFIG set name='SNO_GEN_METHOD',value=(case when value='1' then 'S' else 'A' end) where name='IS_SCANNER_ENABLED';
+insert into config(line, name, value) values ('ALL', 'RECENT_STATOR_SNO', '0000');
+update CONFIG set value=(select recent_test_sno from stator_type where type=(select value from config where name='LAST_USED_STATOR_TYPE')) where name='RECENT_STATOR_SNO';
+delete from config where name in ('QRCODE_LEFT_MARGIN','QRCODE_TOP_MARGIN');
+insert into config(line, name, value) values ('ALL', 'IS_DB_LOCKED', '0');
+
+create table READING_DETAIL_TEMP (test_slno integer primary key autoincrement, stator_type text, test_date date, stator_slno text, res_start float, res_run float, res_com float, temp float, ins_res_bef_hv float, hv_kv float, hv_amps float, ins_res_aft_hv float, surge text, dir text, test_result text, remark text, line text, user text);
+insert into READING_DETAIL_TEMP(stator_type, test_date, stator_slno, res_start, res_run, res_com, temp, ins_res_bef_hv, hv_kv, hv_amps, ins_res_aft_hv, surge, dir, test_result, remark, line, user)
+select stator_type, test_date, test_slno, res_start, res_run, res_com, temp, ins_res_bef_hv, hv_kv, hv_amps, ins_res_aft_hv, surge, dir, test_result, remark, line, user from READING_DETAIL order by rowid;
+
+create table SURGE_IMAGE_TEMP(test_slno integer, wave_img blob);
+insert into SURGE_IMAGE_TEMP(test_slno, wave_img)
+select b.test_slno, a.wave_img
+from SURGE_IMAGE a
+join READING_DETAIL_TEMP b on b.stator_type=a.stator_type and b.stator_slno=a.stator_slno;
+
+alter table READING_DETAIL rename to READING_DETAIL_BACKUP;
+alter table READING_DETAIL_TEMP rename to READING_DETAIL;
+alter table SURGE_IMAGE rename to SURGE_IMAGE_BACKUP;
+alter table SURGE_IMAGE_TEMP rename to SURGE_IMAGE;
+
+/* warning - drop below table once everything is fine */
+drop table READING_DETAIL_BACKUP;
+drop table SURGE_IMAGE_BACKUP;
+
+insert into DEVICE_PARAM values ('ALL', 'Output1', 'PLC', 'Emergency Signal', '15', '', '', 'Coil', 0);
+
+update reading_detail set res_com="NA" where res_com="-";
+
+/* 28-10-2022 - adding direction */
+alter table STATOR_TYPE add column dir text default 'FWD';
+update DEVICE_PARAM set param_name='Direction Fwd Test Switch' where param_name='Direction Test Switch';
+/* do it for all lines and outputs */
+insert into DEVICE_PARAM values ('ALL', 'Output1', 'PLC', 'Direction Rev Test Switch', '68', '', '', 'Coil', 0);;
+
+/* 06-03-2023 - new params in name plate details & bindhu sticker */
+alter table STATOR_TYPE add column vendor_ref text default '';
+alter table STATOR_TYPE add column hv_ma_up_limit float default null;
+alter table READING_DETAIL add column vendor_ref text default '';
+
+/* later once sqlite version upgraded */
+drop column recent_test_sno from stator_type;
+

@@ -1,0 +1,1411 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.8.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+			"$columnSpecs": "fill, 300.0"
+			"$rowSpecs": "40.0, pref, pref, fill, 70.0, 5.0"
+		} ) {
+			name: "this"
+			"$sizePolicy": 0
+			"$locationPolicy": 1
+			"font": new java.awt.Font( "Candara", 0, 14 )
+			"defaultCloseOperation": 3
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/img/app_logo_stator.png" )
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowOpened", "thisWindowOpened", false ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblCompNm"
+				"text": "Company Name"
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "Arial Rounded MT Bold", 0, 24 )
+				"opaque": true
+				"background": sfield java.awt.Color gray
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"border": new javax.swing.border.MatteBorder( 0, 0, 1, 0, sfield java.awt.Color gray )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridWidth": 2
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "150.0, pref, fill, 100.0, 125.0, pref, 75.0"
+				"$rowSpecs": "pref, pref"
+				"hGap": 5
+			} ) {
+				name: "pnlStator"
+				"border": new javax.swing.border.TitledBorder( null, "Stator", 4, 0, new java.awt.Font( "Arial", 0, 16 ), &Color0 new java.awt.Color( 0, 102, 153, 255 ) )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdStator"
+					"text": "<html>Choose Stator<br><font size=-2>[F11]</html>"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/stator.png" )
+					"font": &Font0 new java.awt.Font( "Arial", 0, 15 )
+					"horizontalTextPosition": 4
+					"margin": new java.awt.Insets( 2, 7, 2, 7 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdStatorActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridHeight": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStator4"
+					"text": "Model"
+					"horizontalAlignment": 2
+					"font": &Font1 new java.awt.Font( "Arial", 0, 22 )
+					"background": &Color1 new java.awt.Color( 0, 204, 204, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+					"gridHeight": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStator"
+					"text": "No Stator Chosen"
+					"horizontalAlignment": 0
+					"font": &Font2 new java.awt.Font( "Arial", 1, 22 )
+					"background": #Color1
+					"border": &MatteBorder0 new javax.swing.border.MatteBorder( 1, 1, 2, 2, new java.awt.Color( 0, 153, 153, 255 ) )
+					"opaque": true
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 2
+					"gridHeight": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStator2"
+					"text": " Phase"
+					"horizontalAlignment": 2
+					"font": #Font1
+					"background": #Color1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 3
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblPh"
+					"horizontalAlignment": 0
+					"font": #Font2
+					"background": #Color1
+					"border": #MatteBorder0
+					"opaque": true
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 4
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStator5"
+					"text": "Dir."
+					"horizontalAlignment": 2
+					"font": #Font1
+					"background": #Color1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 5
+					"gridHeight": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblDirection"
+					"horizontalAlignment": 0
+					"font": #Font2
+					"background": #Color1
+					"border": #MatteBorder0
+					"opaque": true
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 6
+					"gridHeight": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStator3"
+					"text": " KW / HP"
+					"horizontalAlignment": 2
+					"font": #Font1
+					"background": #Color1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+					"gridX": 3
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblRat"
+					"horizontalAlignment": 0
+					"font": #Font2
+					"background": #Color1
+					"border": #MatteBorder0
+					"opaque": true
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+					"gridX": 4
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "fill, fill"
+				"$rowSpecs": "fill, fill"
+				"hGap": 1
+			} ) {
+				name: "pnlSet"
+				"border": new javax.swing.border.TitledBorder( null, "Settings", 4, 0, new java.awt.Font( "Arial", 0, 16 ), #Color0 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdTest"
+					"text": "Test"
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": #Font0
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"iconTextGap": 2
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdTestActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdDev"
+					"text": "Device"
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": #Font0
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"iconTextGap": 2
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdDevActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdUser"
+					"text": "User"
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": #Font0
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"iconTextGap": 2
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdUserActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdOther"
+					"text": "Others"
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": #Font0
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"iconTextGap": 2
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdOtherActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+					"gridX": 1
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 1
+				"gridX": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "150.0, fill, pref, fill"
+				"$rowSpecs": "pref"
+				"hGap": 1
+				"vGap": 1
+			} ) {
+				name: "pnlStOut"
+				"border": new javax.swing.border.TitledBorder( null, "Station", 4, 0, new java.awt.Font( "Arial", 0, 16 ), new java.awt.Color( 0, 102, 153, 255 ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+					"$columnSpecs": "pref"
+					"$rowSpecs": "pref"
+					"hGap": 35
+					"vGap": 1
+				} ) {
+					name: "pnlSt"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 2
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 2
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "fill, fill, fill, fill"
+				"$rowSpecs": "pref, 30.0"
+				"hGap": 3
+				"vGap": 3
+			} ) {
+				name: "panel3"
+				"border": new javax.swing.border.TitledBorder( null, "Today's Test Summary", 2, 2, new java.awt.Font( "Arial", 1, 14 ), sfield java.awt.Color darkGray )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"opaque": false
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblTot"
+					"text": "Total"
+					"font": &Font3 new java.awt.Font( "Arial", 1, 24 )
+					"horizontalAlignment": 0
+					"foreground": &Color2 new java.awt.Color( 0, 0, 153, 255 )
+					"background": &Color3 new java.awt.Color( 204, 255, 255, 255 )
+					"opaque": true
+					"toolTipText": "Total tests carried on today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblPass"
+					"text": "Pass"
+					"font": #Font3
+					"horizontalAlignment": 0
+					"foreground": &Color4 new java.awt.Color( 0, 153, 51, 255 )
+					"background": &Color5 new java.awt.Color( 204, 255, 204, 255 )
+					"opaque": true
+					"toolTipText": "Passed tests today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblFail"
+					"text": "Fail"
+					"font": #Font3
+					"horizontalAlignment": 0
+					"foreground": &Color6 new java.awt.Color( 204, 0, 0, 255 )
+					"background": &Color7 new java.awt.Color( 255, 204, 204, 255 )
+					"opaque": true
+					"toolTipText": "Failed tests today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblUknown"
+					"text": "?"
+					"font": #Font3
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color darkGray
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"toolTipText": "Tests with unknown results (neither PASS nor FAIL) today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 3
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblTot"
+					"text": "0"
+					"font": &Font4 new java.awt.Font( "Arial", 1, 30 )
+					"horizontalAlignment": 0
+					"foreground": #Color2
+					"background": #Color3
+					"opaque": true
+					"toolTipText": "Total tests carried on today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblPass"
+					"text": "0"
+					"font": #Font4
+					"horizontalAlignment": 0
+					"foreground": #Color4
+					"background": #Color5
+					"opaque": true
+					"toolTipText": "Passed tests today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblFail"
+					"text": "0"
+					"font": #Font4
+					"horizontalAlignment": 0
+					"foreground": #Color6
+					"background": #Color7
+					"opaque": true
+					"toolTipText": "Failed tests today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 2
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblUnknown"
+					"text": "0"
+					"font": #Font4
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color darkGray
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"toolTipText": "Tests with unknown results (neither PASS nor FAIL) today in this line"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 3
+					"gridY": 1
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 2
+				"gridX": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "150.0, fill, 162.0"
+				"$rowSpecs": "47.0, 22.0, fill, fill, fill, fill, fill, fill, fill, 1.0, pref"
+				"hGap": 5
+				"vGap": 2
+			} ) {
+				name: "pnlTest"
+				"border": new javax.swing.border.TitledBorder( null, "Test Control", 4, 0, new java.awt.Font( "Arial", 0, 16 ), #Color0 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblTestMode"
+					"text": "AUTO"
+					"font": new java.awt.Font( "Arial", 0, 34 )
+					"horizontalAlignment": 0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+					"$columnSpecs": "fill, 16.0, 162.0"
+					"$rowSpecs": "pref, fill"
+					"hGap": 1
+					"vGap": 1
+				} ) {
+					name: "pnlTbl"
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+					"background": sfield java.awt.Color darkGray
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+						"$columnSpecs": "35.0, 70.0, 77.0, 125.0, fill, fill, fill, fill, fill, fill, fill, fill, fill, fill, fill, 100.0, 16.0"
+						"$rowSpecs": "pref, pref"
+						"hGap": 1
+						"vGap": 1
+					} ) {
+						name: "pnlTblHdr"
+						"background": sfield java.awt.Color darkGray
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblCol18"
+							"text": "St"
+							"horizontalAlignment": 0
+							"font": &Font5 new java.awt.Font( "Arial", 0, 16 )
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"foreground": sfield java.awt.Color white
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridHeight": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblCol15"
+							"text": "Date"
+							"horizontalAlignment": 0
+							"font": #Font5
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"foreground": sfield java.awt.Color white
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridHeight": 2
+							"gridX": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblCol12"
+							"text": "Stator SNo."
+							"horizontalAlignment": 0
+							"font": &Font6 new java.awt.Font( "Arial", 0, 16 )
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridHeight": 2
+							"gridX": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHRes"
+							"text": "<html><body  align=\"center\">Resistance</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 4
+							"gridWidth": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblStCl"
+							"text": "<html><body  align=\"center\">Start <br><font size=-2>(Ω)</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 4
+							"gridY": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblRunCl"
+							"text": "<html><body  align=\"center\">Run<br><font size=-2>(Ω)</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 5
+							"gridY": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblComCl"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"text": "<html><body  align=\"center\">Com<br><font size=-2>(Ω)</html>"
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 6
+							"gridY": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHTemp"
+							"text": "<html><body  align=\"center\">T<br><font size=-2>(°C)</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridHeight": 2
+							"gridX": 7
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHIR1"
+							"text": "<html><body  align=\"center\">IR<br>Bef. HV<font size=-2>(MΩ)</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 8
+							"gridHeight": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHHV"
+							"text": "<html><body  align=\"center\">High Voltage</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridWidth": 2
+							"gridX": 9
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHIR2"
+							"text": "<html><body  align=\"center\">IR<br>Aft. HV<font size=-2>(MΩ)</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 11
+							"gridHeight": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHHV1"
+							"text": "<html><body  align=\"center\">kV</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridY": 1
+							"gridX": 9
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblHHV2"
+							"text": "<html><body  align=\"center\">mA</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridY": 1
+							"gridX": 10
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblCol13"
+							"text": "Result"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 14
+							"gridHeight": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblCol10"
+							"text": "Remark"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridHeight": 2
+							"gridX": 15
+							"gridWidth": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblDir"
+							"text": "<html><body  align=\"center\">Dir</html>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 13
+							"gridHeight": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblSurge"
+							"text": "<html><body  align=\"center\">Surge</surge>"
+							"horizontalAlignment": 0
+							"font": #Font6
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+							"foreground": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 12
+							"gridHeight": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "lblCol16"
+							"text": "Test SNo."
+							"horizontalAlignment": 0
+							"font": #Font5
+							"opaque": true
+							"background": sfield java.awt.Color gray
+							"foreground": sfield java.awt.Color white
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"horizontalTextPosition": 0
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+							"gridX": 1
+							"gridHeight": 2
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+						"gridWidth": 2
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "lblHSurge"
+						"text": "Surge Wave"
+						"horizontalAlignment": 0
+						"font": #Font6
+						"opaque": true
+						"background": sfield java.awt.Color gray
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"horizontalTextPosition": 0
+						"foreground": sfield java.awt.Color white
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+						"gridX": 2
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrlTest"
+						"border": new javax.swing.border.EmptyBorder( 0, 0, 0, 0 )
+						"verticalScrollBarPolicy": 22
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "tblTestEntry"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( true )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( true )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							}, new java.util.Vector {
+								add( new com.jformdesigner.model.SwingTableColumn( null, 36, 36, 0, true ) )
+								add( new com.jformdesigner.model.SwingTableColumn( null, 71, 71, 0, true ) )
+								add( new com.jformdesigner.model.SwingTableColumn( null, 78, 78, 0, true ) )
+								add( new com.jformdesigner.model.SwingTableColumn( null, 126, 126, 0, true ) )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( new com.jformdesigner.model.SwingTableColumn( null, 100, 100, 0, true ) )
+							} )
+							"font": new java.awt.Font( "SansSerif", 1, 14 )
+							"rowHeight": 25
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"gridColor": sfield java.awt.Color lightGray
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+						"gridWidth": 2
+						"gridY": 1
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+						"$columnSpecs": "fill"
+						"$rowSpecs": "fill, fill, fill, fill"
+					} ) {
+						name: "pnlWaveImg"
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"background": sfield java.awt.Color white
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+						"gridX": 2
+						"gridY": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+					"gridHeight": 9
+					"gridWidth": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblEmergency"
+					"text": "EMERGENCY ON"
+					"font": new java.awt.Font( "Arial", 1, 16 )
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color red
+					"opaque": true
+					"foreground": sfield java.awt.Color yellow
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "tglTest"
+					"text": "<html>Start Test&nbsp;<font size=-2>[F7]</html>"
+					"font": #Font0
+					"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/img/start.png" )
+					"margin": new java.awt.Insets( 2, 14, 2, 10 )
+					"opaque": true
+					"horizontalAlignment": 2
+					"toolTipText": "Switch on auto capture"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "tglTestActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 2
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdOpen"
+					"text": "<html>Open&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=-2>[F3]</html>"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/open.png" )
+					"font": #Font0
+					"horizontalTextPosition": 4
+					"horizontalAlignment": 2
+					"margin": new java.awt.Insets( 2, 10, 2, 10 )
+					"toolTipText": "To open existing tests"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdOpenActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 5
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdRep"
+					"text": "<html>Reports&nbsp;<font size=-2>[F4]</html>"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/print.png" )
+					"font": #Font0
+					"horizontalTextPosition": 4
+					"horizontalAlignment": 2
+					"margin": new java.awt.Insets( 2, 10, 2, 10 )
+					"toolTipText": "To view and print test reports"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdRepActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 6
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdSave"
+					"text": "<html>Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=-2>[F5]</html>"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/save.png" )
+					"font": #Font0
+					"horizontalTextPosition": 4
+					"horizontalAlignment": 2
+					"toolTipText": "To save any changes manually made in current chosen reading"
+					"margin": new java.awt.Insets( 2, 10, 2, 10 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdSaveActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 7
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cmdDel"
+					"text": "<html>Delete&nbsp;&nbsp;&nbsp;<font size=-2>[F6]</html>"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/delete.png" )
+					"font": #Font0
+					"horizontalTextPosition": 4
+					"horizontalAlignment": 2
+					"toolTipText": "To delete currently chosen reading"
+					"margin": new java.awt.Insets( 2, 10, 2, 10 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cmdDelActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 8
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "tglRetest"
+					"text": "<html>Retest&nbsp;&nbsp;&nbsp;<font size=-2>[F8]</html>"
+					"font": #Font0
+					"icon": #SwingIcon0
+					"margin": new java.awt.Insets( 2, 10, 2, 10 )
+					"opaque": true
+					"horizontalAlignment": 2
+					"toolTipText": "Switch on to retest a previously tested stator"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "tglRetestActionPerformed", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "tglRetest", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 4
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+					"$columnSpecs": "162.0, fill"
+					"$rowSpecs": "pref"
+					"hGap": 5
+					"vGap": 5
+				} ) {
+					name: "panel2"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "Scan Barcode"
+						"font": new java.awt.Font( "Arial", 0, 15 )
+						"horizontalAlignment": 4
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "txtScannedSNo"
+						"font": new java.awt.Font( "SansSerif", 1, 18 )
+						"foreground": sfield java.awt.Color blue
+						"horizontalAlignment": 0
+						addEvent( new FormEvent( "java.awt.event.FocusListener", "focusGained", "txtScannedSNoFocusGained", false ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+						"gridX": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+					"gridY": 10
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 3
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "fill, fill"
+				"$rowSpecs": "30.0, fill, 30.0, fill, 30.0, fill, 30.0, 215.0, 5.0"
+			} ) {
+				name: "pnlLive"
+				"border": new javax.swing.border.TitledBorder( null, "Live Reading", 4, 0, new java.awt.Font( "Arial", 0, 16 ), #Color0 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblL1"
+					"text": "<html>Resistance<font size=-1> (Ω)</html>"
+					"font": &Font7 new java.awt.Font( "Arial", 0, 20 )
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"border": &LineBorder0 new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblL2"
+					"text": "<html>Temp.<font size=-1> (°C)</html>"
+					"font": #Font7
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"border": &LineBorder1 new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLiveRes"
+					"text": "-"
+					"font": new java.awt.Font( "Consolas", 0, 42 )
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"foreground": sfield java.awt.Color orange
+					"border": &LineBorder2 new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLiveTemp"
+					"text": "-"
+					"font": &Font8 new java.awt.Font( "Consolas", 0, 46 )
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"foreground": sfield java.awt.Color orange
+					"border": #LineBorder1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblL3"
+					"text": "<html>Voltage<font size=-1> (kV)</html>"
+					"font": #Font7
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"border": #LineBorder1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblL4"
+					"text": "<html>Current<font size=-1> (mA)</html>"
+					"font": #Font7
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"border": #LineBorder1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 2
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLiveV"
+					"text": "-"
+					"font": #Font8
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"foreground": sfield java.awt.Color orange
+					"border": #LineBorder1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 3
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLiveCur"
+					"text": "-"
+					"font": #Font8
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"foreground": sfield java.awt.Color orange
+					"border": #LineBorder1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 3
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblL6"
+					"text": "<html>Ins. Res.<font size=-1> (MΩ)</html>"
+					"font": #Font7
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"border": #LineBorder0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 4
+					"gridWidth": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLiveIR"
+					"text": "-"
+					"font": #Font8
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"foreground": sfield java.awt.Color orange
+					"border": #LineBorder2
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 5
+					"gridWidth": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbllblLSurge"
+					"text": "Surge Wave"
+					"font": #Font7
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color lightGray
+					"opaque": true
+					"border": #LineBorder1
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 6
+					"gridWidth": 2
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+					"$columnSpecs": "fill"
+					"$rowSpecs": "fill"
+				} ) {
+					name: "pnlWC"
+					"background": sfield java.awt.Color darkGray
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 7
+					"gridWidth": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblResTestStat"
+					"text": "Test Is Disabled"
+					"font": &Font9 new java.awt.Font( "Trebuchet MS", 2, 12 )
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color lightGray
+					"opaque": true
+					"background": sfield java.awt.Color darkGray
+					"border": &LineBorder3 new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblTempTestStat"
+					"text": "Test Is Disabled"
+					"font": #Font9
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color lightGray
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"border": #LineBorder3
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblInsResTestStat"
+					"text": "Test Is Disabled"
+					"font": #Font9
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color lightGray
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"border": #LineBorder3
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 5
+					"gridWidth": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblVTestStat"
+					"text": "Test Is Disabled"
+					"font": #Font9
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color lightGray
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"border": #LineBorder3
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 3
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblCurTestStat"
+					"text": "Test Is Disabled"
+					"font": #Font9
+					"horizontalAlignment": 0
+					"foreground": sfield java.awt.Color lightGray
+					"background": sfield java.awt.Color darkGray
+					"opaque": true
+					"border": #LineBorder3
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 3
+					"gridX": 1
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 3
+				"gridX": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+				"$columnSpecs": "160.0, fill, 300.0"
+				"hGap": 5
+				"vGap": 5
+				"$rowSpecs": "fill, 25.0"
+			} ) {
+				name: "pnlBot"
+				"background": sfield java.awt.Color gray
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblLogo"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/doer_logo.png" )
+					"focusable": false
+					"iconTextGap": 0
+					"cursor": new java.awt.Cursor( 12 )
+					"horizontalAlignment": 0
+					"toolTipText": "Click on this to know about the software and contact details"
+					"background": new java.awt.Color( 0, 51, 153, 255 )
+					"opaque": true
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "lblLogoMouseReleased", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridHeight": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStatus"
+					"text": "IDLE"
+					"font": new java.awt.Font( "Arial Rounded MT Bold", 0, 24 )
+					"horizontalAlignment": 0
+					"horizontalTextPosition": 0
+					"background": sfield java.awt.Color gray
+					"foreground": sfield java.awt.Color yellow
+					"focusable": false
+					"toolTipText": "Displays the current status of this application"
+					"alignmentY": 0.0f
+					"opaque": true
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 1
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtSignal"
+					"font": new java.awt.Font( "Arial", 1, 15 )
+					"foreground": sfield java.awt.Color white
+					"horizontalAlignment": 0
+					"background": sfield java.awt.Color gray
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"cursor": new java.awt.Cursor( 2 )
+					"caretColor": sfield java.awt.Color lightGray
+					"disabledTextColor": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridY": 1
+					"gridX": 1
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "lstError"
+					"foreground": sfield java.awt.Color white
+					"toolTipText": "List of recent capture errors. Double click to expand, Delete key to clear."
+					"visibleRowCount": 2
+					"selectionBackground": new java.awt.Color( 255, 228, 196, 255 )
+					"selectionForeground": sfield java.awt.Color red
+					"background": sfield java.awt.Color gray
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": new java.awt.Font( "Arial", 0, 11 )
+					"selectionMode": 0
+					auxiliary() {
+						"JavaCodeGenerator.preCreateCode": "errLogModel = new DefaultListModel();"
+						"JavaCodeGenerator.customCreateCode": "new JList(errLogModel);"
+					}
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "lstErrorMouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "lstErrorKeyPressed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+					"gridX": 2
+					"gridHeight": 2
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 4
+				"gridWidth": 2
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1280, 770 )
+		} )
+	}
+}

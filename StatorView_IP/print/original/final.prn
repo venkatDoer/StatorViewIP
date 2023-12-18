@@ -1,0 +1,16 @@
+<xpml><page quantity='0' pitch='11.5 mm'></xpml>SIZE 26.1 mm, 11.5 mm
+DIRECTION 0,0
+REFERENCE 0,0
+OFFSET 0 mm
+SET PEEL OFF
+SET CUTTER OFF
+SET PARTIAL_CUTTER OFF
+<xpml></page></xpml><xpml><page quantity='1' pitch='11.5 mm'></xpml>SET TEAR ON
+CLS
+QRCODE 83,84,L,3,A,180,M2,S7,"ABCD 12345"
+CODEPAGE 1252
+TEXT 196,85,"0",180,7,7,"TEST MODEL"
+TEXT 196,40,"0",180,7,7,"ABCD 12345"
+TEXT 196,62,"0",180,7,7,"05-06-2022"
+PRINT 1,1
+<xpml></page></xpml><xpml><end/></xpml>
